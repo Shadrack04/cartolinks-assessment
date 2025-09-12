@@ -2,13 +2,14 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { MdHomeFilled } from "react-icons/md";
 import Link from "next/link";
-import { FaFolder, FaRegImage, FaVideo } from "react-icons/fa";
+import { FaCodeBranch, FaFolder, FaRegImage, FaVideo } from "react-icons/fa";
 import { FaWandSparkles } from "react-icons/fa6";
+import { LuGitCommitVertical } from "react-icons/lu";
 
 export default function NavigationTabs() {
   return (
     <Tabs defaultValue="home" className="items-center">
-      <TabsList className=" gap-4 h-12 rounded-xl p-1.5">
+      <TabsList className=" gap-1 h-13 rounded-xl p-1.5">
         <TabsTrigger
           value="home"
           asChild
@@ -18,6 +19,7 @@ export default function NavigationTabs() {
             <MdHomeFilled className=" size-4 " />
           </Link>
         </TabsTrigger>
+
         <TabsTrigger
           value="image"
           asChild
@@ -27,6 +29,7 @@ export default function NavigationTabs() {
             <FaRegImage className=" size-4 " />
           </Link>
         </TabsTrigger>
+
         <TabsTrigger
           value="video"
           asChild
@@ -36,6 +39,7 @@ export default function NavigationTabs() {
             <FaVideo className=" size-4 " />
           </Link>
         </TabsTrigger>
+
         <TabsTrigger
           value="enhancer"
           asChild
@@ -45,11 +49,26 @@ export default function NavigationTabs() {
             <FaWandSparkles className=" rotate-y-180 size-4" />
           </Link>
         </TabsTrigger>
-        {/* <TabsTrigger value="tab-2" asChild>
+
+        <TabsTrigger
+          value="realtime"
+          asChild
+          className=" p-4 data-[state=active] data-[state=active]:p-4"
+        >
           <Link href="/">
-            <Image src="/icons/edit.svg" width={24} height={24} alt="" />
+            <LuGitCommitVertical className=" size-4" />
           </Link>
-        </TabsTrigger> */}
+        </TabsTrigger>
+
+        <TabsTrigger
+          value="edit"
+          asChild
+          className=" p-4 data-[state=active] data-[state=active]:p-4"
+        >
+          <Link href="/">
+            <FaCodeBranch className=" size-4 rotate-x-180" />
+          </Link>
+        </TabsTrigger>
         <TabsTrigger
           value="assets"
           asChild
