@@ -1,33 +1,48 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { FolderClosed, House } from "lucide-react";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 import { MdHomeFilled } from "react-icons/md";
 import Link from "next/link";
 import { FaFolder, FaRegImage, FaVideo } from "react-icons/fa";
 import { FaWandSparkles } from "react-icons/fa6";
-import Image from "next/image";
 
 export default function NavigationTabs() {
   return (
-    <Tabs defaultValue="tab-1" className="items-center">
-      <TabsList>
-        <TabsTrigger value="tab-1" asChild>
+    <Tabs defaultValue="home" className="items-center">
+      <TabsList className=" gap-4 h-12 rounded-xl p-1.5">
+        <TabsTrigger
+          value="home"
+          asChild
+          className=" p-4 data-[state=active] data-[state=active]:p-4"
+        >
           <Link href="/">
-            <MdHomeFilled />
+            <MdHomeFilled className=" size-4 " />
           </Link>
         </TabsTrigger>
-        <TabsTrigger value="tab-2" asChild>
+        <TabsTrigger
+          value="image"
+          asChild
+          className=" p-4 data-[state=active] data-[state=active]:p-4"
+        >
           <Link href="/">
-            <FaRegImage />
+            <FaRegImage className=" size-4 " />
           </Link>
         </TabsTrigger>
-        <TabsTrigger value="tab-2" asChild>
+        <TabsTrigger
+          value="video"
+          asChild
+          className=" p-4 data-[state=active] data-[state=active]:p-4"
+        >
           <Link href="/">
-            <FaVideo />
+            <FaVideo className=" size-4 " />
           </Link>
         </TabsTrigger>
-        <TabsTrigger value="tab-2" asChild>
+        <TabsTrigger
+          value="enhancer"
+          asChild
+          className=" p-4 data-[state=active] data-[state=active]:p-4"
+        >
           <Link href="/">
-            <FaWandSparkles className=" rotate-y-180" />
+            <FaWandSparkles className=" rotate-y-180 size-4" />
           </Link>
         </TabsTrigger>
         {/* <TabsTrigger value="tab-2" asChild>
@@ -35,9 +50,13 @@ export default function NavigationTabs() {
             <Image src="/icons/edit.svg" width={24} height={24} alt="" />
           </Link>
         </TabsTrigger> */}
-        <TabsTrigger value="tab-3" asChild>
+        <TabsTrigger
+          value="assets"
+          asChild
+          className=" p-4 data-[state=active] data-[state=active]:p-4"
+        >
           <Link href="/">
-            <FaFolder />
+            <FaFolder className=" size-4" />
           </Link>
         </TabsTrigger>
       </TabsList>
