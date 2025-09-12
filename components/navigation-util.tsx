@@ -1,22 +1,23 @@
 import { Bell, Moon } from "lucide-react";
 import React from "react";
 import { BiSupport } from "react-icons/bi";
-import { FaRegImage, FaUserAlt } from "react-icons/fa";
+import { FaBell, FaMoon, FaRegImage, FaUserAlt } from "react-icons/fa";
 
 export default function NavigationUtil() {
   return (
     <div className=" flex items-center gap-2">
-      <div className=" flex items-center gap-1">
+      <div className=" flex items-center gap-1 bg-muted py-2 px-3 rounded-lg">
         <FaRegImage />
         <p>Gallery</p>
       </div>
-      <div className=" flex items-center gap-1">
+      <div className=" flex items-center gap-1 bg-muted py-2 px-3 rounded-lg">
         <BiSupport />
         <p>Support</p>
       </div>
-      <Moon />
-      <Bell />
-      <FaUserAlt />
+      <FaMoon className="bg-muted py-2 px-3 rounded-lg size-10" />
+      <FaBell className="bg-muted py-2 px-3 rounded-lg size-10" />
+
+      <FaUserAlt className="bg-muted py-2 px-3 rounded-lg size-10" />
     </div>
   );
 }

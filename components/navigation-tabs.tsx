@@ -30,11 +30,11 @@ export default function NavigationTabs() {
             <FaWandSparkles className=" rotate-y-180" />
           </Link>
         </TabsTrigger>
-        <TabsTrigger value="tab-2" asChild>
+        {/* <TabsTrigger value="tab-2" asChild>
           <Link href="/">
             <Image src="/icons/edit.svg" width={24} height={24} alt="" />
           </Link>
-        </TabsTrigger>
+        </TabsTrigger> */}
         <TabsTrigger value="tab-3" asChild>
           <Link href="/">
             <FaFolder />
