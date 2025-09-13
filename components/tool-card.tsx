@@ -19,7 +19,7 @@ export default function ToolCard({
         </div>
         <div className=" w-[10rem]">
           <div className=" flex gap-1 items-center">
-            <h3 className="font-semibold ">{name}</h3>
+            <h3 className="font-semibold">{name}</h3>
             {isNew && <Button className=" bg-blue-800 p-1 h-5">New</Button>}
           </div>
           <p className=" text-xs leading-4 text-[#a5a5a5] ">{description}</p>

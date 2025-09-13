@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageCarousel } from "./image-carousel";
+
 import Image from "next/image";
 import { images } from "@/constants/images";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
