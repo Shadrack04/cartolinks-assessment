@@ -2,6 +2,7 @@ import React from "react";
 import { ImageCarousel } from "./image-carousel";
 import Image from "next/image";
 import { images } from "@/constants/images";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function Hero() {
   return (
@@ -52,8 +53,13 @@ export default function Hero() {
             className={`${
               index != 0 ? "bg-muted" : "bg-foreground"
             } size-1.5 rounded-full `}
-          ></div>
+          />
         ))}
+      </div>
+
+      <div className=" absolute z-30 bottom-2 right-4 flex gap-2 items-center">
+        <IoIosArrowBack className="bg-muted p-1 rounded-full size-6" />
+        <IoIosArrowForward className="bg-muted p-1 rounded-full size-6" />
       </div>
 
       {/* <ImageCarousel /> */}
