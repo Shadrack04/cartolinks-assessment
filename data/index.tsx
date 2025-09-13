@@ -5,6 +5,7 @@ import { FaWandSparkles } from "react-icons/fa6";
 import { LuGitCommitVertical } from "react-icons/lu";
 import { LuMicVocal } from "react-icons/lu";
 import { IoBodySharp } from "react-icons/io5";
+import { LuAperture } from "react-icons/lu";
 
 export const toolsData: ToolsDataType[] = [
   {
@@ -66,7 +67,7 @@ export const toolsData: ToolsDataType[] = [
     name: "Train",
     description: "Generate images with custom styles in flux and ideogram",
     isNew: false,
-    Icon: FaImage,
+    Icon: LuAperture,
     bg: " bg-[#ffa600]",
   },
 ];

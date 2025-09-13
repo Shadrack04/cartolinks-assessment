@@ -4,7 +4,7 @@ import { toolsData } from "@/data";
 
 export default function Tools() {
   return (
-    <div className=" grid grid-cols-4 gap-2 mb-8">
+    <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-8">
       {toolsData.map((tool) => (
         <ToolCard
           key={tool.name}
@@ -15,14 +15,6 @@ export default function Tools() {
           bg={tool.bg}
         />
       ))}
-      {/* <ToolCard />
-      <ToolCard />
-      <ToolCard />
-      <ToolCard />
-      <ToolCard />
-      <ToolCard />
-      <ToolCard />
-      <ToolCard /> */}
     </div>
   );
 }

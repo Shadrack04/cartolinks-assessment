@@ -16,7 +16,7 @@ export default function ToolCard({
         <div className={`  ${bg} p-2 rounded-md `}>
           <Icon className=" size-6 text-background" />
         </div>
-        <div className=" w-[10rem]">
+        <div className=" md:w-[10rem]">
           <div className=" flex gap-1 items-center">
             <h3 className="font-semibold">{name}</h3>
             {isNew && <Button className=" bg-blue-800 p-1 h-5">New</Button>}

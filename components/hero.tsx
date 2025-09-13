@@ -7,7 +7,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 export default function Hero() {
   return (
     <div className="relative max-w-full flex gap-10 overflow-hidden py-10">
-      <div className="relative rounded-2xl overflow-hidden w-[55%] h-80 shrink-0">
+      <div className="relative rounded-2xl overflow-hidden w-full md:w-[55%] h-80 shrink-0">
         <Image
           src={images.wanImage}
           alt=""
@@ -24,7 +24,7 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <div className="relative rounded-2xl overflow-hidden aspect-video w-[55%] h-80 shrink-0">
+      <div className="hidden md:block relative rounded-2xl overflow-hidden aspect-video w-[55%] h-80 shrink-0">
         <video
           src="open-source.mp4"
           muted
