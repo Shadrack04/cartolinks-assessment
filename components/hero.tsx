@@ -58,8 +58,8 @@ export default function Hero() {
       </div>
 
       <div className=" absolute z-30 bottom-2 right-4 flex gap-2 items-center">
-        <IoIosArrowBack className="bg-muted p-1 rounded-full size-6" />
-        <IoIosArrowForward className="bg-muted p-1 rounded-full size-6" />
+        <IoIosArrowBack className="bg-muted p-1 cursor-pointer rounded-full size-6" />
+        <IoIosArrowForward className="bg-muted p-1 cursor-pointer rounded-full size-6" />
       </div>
 
       {/* <ImageCarousel /> */}
