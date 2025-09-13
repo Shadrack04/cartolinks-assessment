@@ -10,7 +10,6 @@ export default function ToolCard({
   isNew,
   bg,
 }: ToolsDataType) {
-  console.log(bg);
   return (
     <div className=" flex items-center justify-center cursor-pointer gap-2 hover:bg-muted rounded-xl p-4 ">
       <div className=" flex items-center gap-2">
