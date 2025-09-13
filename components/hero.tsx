@@ -39,7 +39,7 @@ export default function Hero() {
             Flux.1 Krea
           </h3>
           <p className=" text-xs">
-            We're making the weights so our Flux.1 Krea modal open-source.
+            We&apos;re making the weights so our Flux.1 Krea modal open-source.
             Download and run our model weights, read the technical report, or
             generate with it in Krea image
           </p>

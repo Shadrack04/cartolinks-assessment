@@ -1,4 +1,3 @@
-import { Bell, Moon } from "lucide-react";
 import React from "react";
 import { BiSupport } from "react-icons/bi";
 import { FaBell, FaMoon, FaRegImage, FaUserAlt } from "react-icons/fa";
