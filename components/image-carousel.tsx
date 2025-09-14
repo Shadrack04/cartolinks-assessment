@@ -13,6 +13,7 @@ import {
 import CarouselComponent from "./carousel-component";
 import { carouselData } from "@/data";
 import Autoplay from "embla-carousel-autoplay";
+import type { EmblaCarouselType } from "embla-carousel";
 
 export function ImageCarousel() {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
@@ -21,7 +22,7 @@ export function ImageCarousel() {
   const plugin = React.useRef(
     Autoplay({ delay: 3000, stopOnInteraction: true })
   );
-  const carouselApi = React.useRef<any>(null);
+  const carouselApi = React.useRef<EmblaCarouselType | null>(null);
 
   const onSelect = React.useCallback(() => {
     if (!carouselApi.current) return;
@@ -29,7 +30,7 @@ export function ImageCarousel() {
   }, []);
 
   const onInit = React.useCallback(
-    (api: any) => {
+    (api: EmblaCarouselType) => {
       carouselApi.current = api;
       setScrollSnaps(api.scrollSnapList());
       api.on("select", onSelect);
@@ -68,7 +69,7 @@ export function ImageCarousel() {
             key={index}
             className={`${
               index == selectedIndex ? "bg-foreground" : "bg-muted"
-            } size-1.5 rounded-full `}
+            } size-1.5 rounded-full cursor-pointer `}
           />
         ))}
       </div>
