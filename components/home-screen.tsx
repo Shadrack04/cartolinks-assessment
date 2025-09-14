@@ -6,7 +6,6 @@ import { ImageCarousel } from "./image-carousel";
 export default function HomeScreen() {
   return (
     <div>
-      {/* <Hero /> */}
       <ImageCarousel />
       <Tools />
     </div>

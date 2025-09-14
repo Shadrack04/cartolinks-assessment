@@ -47,3 +47,25 @@ export function ImageCarousel() {
     </Carousel>
   );
 }
+
+{
+  /* <div className="relative max-w-full flex gap-10 overflow-hidden py-10">
+      <div className="relative rounded-2xl overflow-hidden w-full md:w-[55%] h-80 shrink-0">
+        <Image
+          src={images.wanImage}
+          alt=""
+          fill
+          className=" hover:scale-105 transition-all duration-300 "
+        />
+        <div className=" absolute bottom-2 left-2 w-[19.1rem] text-white">
+          <h3 className=" text-[1.3rem] tracking-tight font-bold">
+            WAN 2.2 Images generation
+          </h3>
+          <p className=" text-xs">
+            Generate complex with the brand new and powerful WAN 2.2 model.
+            Exceptional prompt adherence and ultra-realistic features
+          </p>
+        </div>
+      </div>
+      </div> */
+}
