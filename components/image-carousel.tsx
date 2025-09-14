@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 
 import {
@@ -10,15 +12,44 @@ import {
 
 import CarouselComponent from "./carousel-component";
 import { carouselData } from "@/data";
+import Autoplay from "embla-carousel-autoplay";
 
 export function ImageCarousel() {
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const [scrollSnaps, setScrollSnaps] = React.useState<number[]>([]);
+
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  );
+  const carouselApi = React.useRef<any>(null);
+
+  const onSelect = React.useCallback(() => {
+    if (!carouselApi.current) return;
+    setSelectedIndex(carouselApi.current.selectedScrollSnap());
+  }, []);
+
+  const onInit = React.useCallback(
+    (api: any) => {
+      carouselApi.current = api;
+      setScrollSnaps(api.scrollSnapList());
+      api.on("select", onSelect);
+      onSelect();
+    },
+    [onSelect]
+  );
+
   return (
-    <Carousel className="relative w-full max-w-full py-10">
+    <Carousel
+      plugins={[plugin.current]}
+      opts={{ loop: true }}
+      setApi={onInit}
+      className="relative w-full max-w-full py-10"
+    >
       <CarouselContent className="-ml-1">
         {carouselData.map((item, index) => (
           <CarouselItem
             key={index}
-            className="pl-1 basis-[100%] md:basis-1/2 lg:basis-3/5 "
+            className="pl-6 basis-[100%] md:basis-1/2 lg:basis-3/5 "
           >
             <CarouselComponent
               title={item.title}
@@ -31,11 +62,12 @@ export function ImageCarousel() {
       </CarouselContent>
 
       <div className=" absolute z-30 bottom-4 flex gap-1 left-[45%]">
-        {Array.from({ length: carouselData.length }, (_, index) => (
+        {scrollSnaps.map((_, index) => (
           <div
+            onClick={() => carouselApi.current?.scrollTo(index)}
             key={index}
             className={`${
-              index != 0 ? "bg-muted" : "bg-foreground"
+              index == selectedIndex ? "bg-foreground" : "bg-muted"
             } size-1.5 rounded-full `}
           />
         ))}
