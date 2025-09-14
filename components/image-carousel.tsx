@@ -30,10 +30,11 @@ export function ImageCarousel() {
   }, []);
 
   const onInit = React.useCallback(
-    (api: EmblaCarouselType) => {
+    (api: EmblaCarouselType | undefined) => {
+      if (!api) return;
       carouselApi.current = api;
-      setScrollSnaps(api.scrollSnapList());
-      api.on("select", onSelect);
+      setScrollSnaps(api?.scrollSnapList());
+      api?.on("select", onSelect);
       onSelect();
     },
     [onSelect]
