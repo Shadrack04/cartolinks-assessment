@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { BiSupport } from "react-icons/bi";
 import { FaBell, FaMoon, FaRegImage, FaSun, FaUserAlt } from "react-icons/fa";
+import Profile from "./profile";
 
 export default function NavigationUtil() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -50,7 +51,9 @@ export default function NavigationUtil() {
 
       <FaBell className="bg-muted p-2 rounded-full size-8" />
 
-      <FaUserAlt className="bg-muted p-2 rounded-full size-8" />
+      {/* <FaUserAlt className="bg-muted p-2 rounded-full size-8" /> */}
+
+      <Profile />
     </div>
   );
 }
